@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cryt API</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141019714-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-141019714-1');
+    </script>
+
+    <meta charset="utf-8">
+    <title>cryt</title>
+    <meta name="author" content="Adam Sever">
+    <meta name="description" content="Data API for jobs">
+    <meta name="keywords" content="IT,Dublin,Web Scraping,website">
+    <meta property="og:url" content="https://www.cryt.ie/api/api.html"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Software Company"/>
+    <meta property="og:description"
+          content="Cryt is a Company that is inspired by how far IT technologies has brought us and strive to help others unlock their full potential"/>
+    <meta property="og:image" content="https://www.cryt.ie/images/hero-bg.jpg"/>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/vendor.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <script src="../js/modernizr.js"></script>
+    <script src="../js/pace.min.js"></script>
+
+    <style>
+        iframe {
+            margin: 0 auto;
+            display: block;
+        }
+
+        .rotating-text {
+            font-family: Lato, sans-serif;
+            font-weight: 600;
+            font-size: 36px;
+            color: white;
+            transform: translateX(-80px);
+        }
+
+        .rotating-text p {
+            display: inline-flex;
+            margin: 0;
+            vertical-align: top;
+        }
+
+        .rotating-text p .word {
+            position: absolute;
+            display: flex;
+            opacity: 0;
+        }
+
+        .rotating-text p .word .letter {
+            transform-origin: center center 25px;
+        }
+
+        .rotating-text p .word .letter.out {
+            transform: rotateX(90deg);
+            transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
+        }
+
+        .rotating-text p .word .letter.in {
+            transition: 0.38s ease;
+        }
+
+        .rotating-text p .word .letter.behind {
+            transform: rotateX(-90deg);
+        }
+
+        .alizarin {
+            color: #e74c3c;
+        }
+
+        .wisteria {
+            color: #8e44ad;
+        }
+
+        .peter-river {
+            color: #3498db;
+        }
+
+        .emerald {
+            color: #2ecc71;
+        }
+
+        .sun-flower {
+            color: #f1c40f;
+        }
+
+        #use_the_data * {
+            color: white;
+            margin: auto;
+        }
+
+
+
+    </style>
+
+    <style>
+        #Layer_1 {
+            width: 120px;
+            overflow: visible;
+        }
+
+        #green_rec {
+            animation-duration: 1.2s;
+            animation-name: bounce;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            /*animation-name: shake;*/
+        }
+
+        #blue_rec {
+            animation-duration: 1.2s;
+            animation-delay: 1.2s;
+            animation-name: bounce;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+
+        }
+
+        #red_rec {
+            animation-duration: 1.2s;
+            animation-name: bounce;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        #map {
+            height: 100%;
+        }
+
+        .section_header {
+            padding: 1em 1em 0.23em;
+        }
+
+        #get_data_list {
+            list-style: none;
+
+        }
+
+        #get_data_list div {
+            display: flex;
+            align-items: center;
+            text-align: left;
+        }
+
+        #get_data_list h3 {
+            color: black;
+            text-transform: initial;
+        }
+
+        #get_data_list li {
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+
+        #store_data {
+            background-image: url("../images/fillingCabientBackground.jpg");
+            background-position: right;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #store_data_ul {
+            list-style: none;
+
+        }
+
+        #store_data_ul li {
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+
+        #store_data_ul div {
+            display: flex;
+            align-items: center;
+            text-align: left;
+        }
+
+        #store_data_ul h3 {
+            color: black;
+            text-transform: initial;
+        }
+        #pricing p {
+            color: white;
+        }
+        #pricing h2 {
+            color: white;
+        }
+
+ 
+    </style>
+
+</head>
+<body>
+<header>
+
+    <div class="header-logo">
+        <a href="../index.html"><img src="../images/icon/crytSvgNoBackgroundAndColor.svg" alt="logo" style=""></a>
+    </div>
+
+    <a id="header-menu-trigger" href="#0">
+        <span class="header-menu-text">Menu</span>
+        <span class="header-menu-icon"></span>
+    </a>
+
+    <nav id="menu-nav-wrap">
+
+        <a href="#0" class="close-button" title="close"><span>Close</span></a>
+
+        <h3>Cryt</h3>
+
+        <ul class="nav-list">
+            <li class="current"><a class="smoothscroll" href="../index.html#home" title="">Home</a></li>
+            <li><a class="smoothscroll" href="../index.html#about" title="">About</a></li>
+            <li><a class="smoothscroll" href="../index.html#services" title="">Services</a></li>
+            <li><a class="smoothscroll" href="../index.html#portfolio" title="">Works</a></li>
+            <li><a class="smoothscroll" href="#contact" title="">Contact</a></li>
+        </ul>
+
+        <p class="sponsor-text">
+            Chat now with one of out consultants <span>now 0879658410</span>.
+        </p>
+
+        <ul class="header-social-list">
+            <li>
+                <a href="https://www.facebook.com/Cryt-857364531285676"><i class="fa fa-facebook-square"></i></a>
+            </li>
+
+            <li>
+                <a href="https://www.linkedin.com/company/cryt"><i class="fa fa-linkedin-square"></i></a>
+            </li>
+        </ul>
+
+    </nav>
+
+</header>
+
+<section id="getTheData" style="margin-top: 15%">
+    <div class="home-content-table">
+        <div class="home-content-tablecell">
+            <div class="row">
+                <div class="col-twelve">
+                    <div class="rotating-text">
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                             viewBox="0 0 205.23 313.25">
+                            <defs>
+                                <style>.cls-1 {
+                                    isolation: isolate;
+                                }
+
+                                .cls-2 {
+                                    fill: #008c1a;
+                                }
+
+                                .cls-3 {
+                                    fill: #005710;
+                                }
+
+                                .cls-4 {
+                                    fill: #009d3b;
+                                }
+
+                                .cls-5 {
+                                    fill: #006224;
+                                }
+
+                                .cls-6 {
+                                    fill: #007e17;
+                                }
+
+                                .cls-7 {
+                                    fill: #008e35;
+                                }
+
+                                .cls-8 {
+                                    fill: #1971db;
+                                }
+
+                                .cls-9 {
+                                    fill: #104688;
+                                }
+
+                                .cls-10 {
+                                    fill: #4c7edb;
+                                }
+
+                                .cls-11 {
+                                    fill: #2f4e88;
+                                }
+
+                                .cls-12 {
+                                    fill: #1665c5;
+                                }
+
+                                .cls-13 {
+                                    fill: #4471c5;
+                                }
+
+                                .cls-14 {
+                                    fill: #db2262;
+                                }
+
+                                .cls-15 {
+                                    fill: #88153d;
+                                }
+
+                                .cls-16 {
+                                    fill: #db6073;
+                                }
+
+                                .cls-17 {
+                                    fill: #883b48;
+                                }
+
+                                .cls-18 {
+                                    fill: #c51e58;
+                                }
+
+                                .cls-19 {
+                                    fill: #c55668;
+                                }</style>
+                            </defs>
+                            <title>barchartWith3d</title>
+                            <g id="green_rec" data-name="green rec">
+                                <g class="cls-1">
+                                    <polygon class="cls-2"
+                                             points="36.37 302.43 1.13 281.95 45.11 256.56 80.35 277.03 36.37 302.43"/>
+                                    <polygon class="cls-3"
+                                             points="80.35 277.03 45.11 256.56 44.7 109.83 79.94 130.31 80.35 277.03"/>
+                                    <polygon class="cls-4"
+                                             points="35.95 155.7 0.71 135.22 44.7 109.83 79.94 130.31 35.95 155.7"/>
+                                    <polygon class="cls-5"
+                                             points="36.37 302.43 1.13 281.95 0.71 135.22 35.95 155.7 36.37 302.43"/>
+                                    <path class="cls-6"
+                                          d="M38.71,157.17,84.11,131l.42,148.36-45.4,26.21ZM83.82,278.91,83.4,132.18l-44,25.39.41,146.73,44-25.39"
+                                          transform="translate(-3.47 -1.87)"/>
+                                    <polygon class="cls-7"
+                                             points="79.94 130.31 80.35 277.03 36.37 302.43 35.95 155.7 79.94 130.31"/>
+                                    <polygon class="cls-3"
+                                             points="35.66 303.65 0.42 283.17 0 134.81 35.24 155.29 35.66 303.65"/>
+                                    <polygon class="cls-2"
+                                             points="35.24 155.29 0 134.81 45.4 108.6 80.64 129.08 35.24 155.29"/>
+                                </g>
+                            </g>
+                            <g id="blue_rec" data-name="blue rec">
+                                <g class="cls-1">
+                                    <polygon class="cls-8"
+                                             points="99.44 303.88 64.2 283.41 108.18 258.01 143.42 278.49 99.44 303.88"/>
+                                    <polygon class="cls-9"
+                                             points="143.42 278.49 108.18 258.01 107.63 62.37 142.87 82.85 143.42 278.49"/>
+                                    <polygon class="cls-10"
+                                             points="98.88 108.24 63.64 87.77 107.63 62.37 142.87 82.85 98.88 108.24"/>
+                                    <polygon class="cls-11"
+                                             points="99.44 303.88 64.2 283.41 63.64 87.77 98.88 108.24 99.44 303.88"/>
+                                    <path class="cls-12"
+                                          d="M101.64,109.71,147,83.5l.56,197.27L102.2,307Zm45.25,170.65-.56-195.64-44,25.4.55,195.64,44-25.4"
+                                          transform="translate(-3.47 -1.87)"/>
+                                    <polygon class="cls-13"
+                                             points="142.87 82.85 143.42 278.49 99.44 303.88 98.88 108.24 142.87 82.85"/>
+                                    <polygon class="cls-9"
+                                             points="98.73 305.11 63.49 284.63 62.93 87.36 98.17 107.84 98.73 305.11"/>
+                                    <polygon class="cls-8"
+                                             points="98.17 107.84 62.93 87.36 108.33 61.15 143.57 81.63 98.17 107.84"/>
+                                </g>
+                            </g>
+                            <g id="red_rec" data-name="red rec">
+                                <g class="cls-1">
+                                    <polygon class="cls-14"
+                                             points="160.54 312.03 125.3 291.55 169.28 266.16 204.52 286.64 160.54 312.03"/>
+                                    <polygon class="cls-15"
+                                             points="204.52 286.64 169.28 266.16 168.53 1.23 203.77 21.71 204.52 286.64"/>
+                                    <polygon class="cls-16"
+                                             points="159.78 47.1 124.55 26.63 168.53 1.23 203.77 21.71 159.78 47.1"/>
+                                    <polygon class="cls-17"
+                                             points="160.54 312.03 125.3 291.55 124.55 26.63 159.78 47.1 160.54 312.03"/>
+                                    <path class="cls-18"
+                                          d="M162.54,48.56l45.4-26.21.76,266.56-45.4,26.22Zm45.45,240-.75-264.93-44,25.4L164,313.9l44-25.39"
+                                          transform="translate(-3.47 -1.87)"/>
+                                    <polygon class="cls-19"
+                                             points="203.77 21.71 204.52 286.64 160.54 312.03 159.78 47.1 203.77 21.71"/>
+                                    <polygon class="cls-15"
+                                             points="159.83 313.25 124.59 292.77 123.83 26.21 159.07 46.69 159.83 313.25"/>
+                                    <polygon class="cls-14"
+                                             points="159.07 46.69 123.83 26.21 169.24 0 204.48 20.48 159.07 46.69"/>
+                                </g>
+                            </g>
+                        </svg>
+                        <p style="font-size: 1em">The data you need for your </p>
+                        <p>
+                            <span class="word alizarin" style="font-size: 1em">Business.</span>
+                            <span class="word wisteria" style="font-size: 1em">Research.</span>
+                            <span class="word peter-river" style="font-size: 1em">Sales.</span>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <ul class="home-social-list">
+        <li class="animate-intro">
+            <a href="https://www.facebook.com/Cryt-857364531285676"><i class="fa fa-facebook-square"></i></a>
+        </li>
+
+        <li class="animate-intro">
+            <a href="https://www.linkedin.com/company/cryt"><i class="fa fa-linkedin-square"></i></a>
+        </li>
+    </ul>
+</section>
+
+<section id="get_data" style="background-color: white;min-height: 100vh">
+
+    <div class="home-content-table">
+        <div class="home-content-tablecell">
+            <h1 style="color: black" class="section_header">How we get the data?</h1>
+            <div class="row">
+                <div class="col-twelve">
+
+                    <h2 style="font-size: 4em;color: black">We use web scraping technologies to gather the information
+                        you need. </h2>
+                    <ul style="list-style: none" id="get_data_list">
+                        <li>
+                            <div>
+                                <h3>Using Data mining we can scrap data and overlooked obscure meta data. For deep
+                                    insights.</h3>
+                                <img src="../images/api/mineIcon.svg" alt="pickaxe" style="width: 120px;">
+                            </div>
+                        </li>
+                        <li>
+                            <div style="display: flex;align-items: center">
+                                <h3>Using Spiders we can crawl through networks and computers throughout the world and
+                                    build complex modals and link lists.</h3>
+                                <img src="../images/api/scrapyRoundIcon.svg" alt="scrapy" style="width: 120px;">
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <h3>Using robust scripts we can automate the web to complete business operations in
+                                    seconds, on schedule and save on human resources.</h3>
+                                <img src="../images/api/cogs.svg" alt="cog" style="width: 120px;height: 120px">
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <h3>After data extraction we clean and filter the data to ensure integrity.</h3>
+                                <img src="../images/api/filter.svg" alt="filter" style="width: 120px;height: 120px">
+                            </div>
+
+                        </li>
+                    </ul>
+
+
+                    <a href="https://www.youtube.com/watch?v=cPx621bqgkY&t=12s">
+                        <button>
+                            <img src="../images/api/utubePlay.svg" alt="youtubeButtn" width="32px">
+                            <span>Watch Video</span>
+                        </button>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="store_data">
+    <div class="home-content-table">
+        <div class="home-content-tablecell">
+            <h1 style="color: black" class="section_header">Where to put the data?</h1>
+            <div class="row">
+                <div class="col-twelve">
+
+            <ul id="store_data_ul">
+                <li>
+                    <div>
+                        <img src="../images/api/database.svg" alt="database" width="120px">
+                        <h3>
+                            We can store the data on our servers and give you as much access as you need along side
+                            creating a portal for members of your organisation to access.
+                        </h3>
+                    </div>
+
+                </li>
+                <li>
+                    <div>
+                        <img src="../images/api/cloud.svg" alt="database" width="120px">
+                        <h3>
+                            We have procedure's to connect to your existing infrastructure weather it would be a
+                            relational or NoSql
+                            database furthermore we can export all data to excel or google spreadsheets.
+                        </h3>
+                    </div>
+                </li>
+
+            </ul>
+
+                </div></div>
+        </div>
+    </div>
+
+
+</section>
+
+
+<section id="view_data">
+    <div class="home-content-table">
+        <div class="home-content-tablecell">
+            <div class="row">
+                <div class="col-twelve">
+                    <div style="margin-top: 5%"></div>
+                    <div id="Choose_type">
+                        <h1>Chooses a Data Source</h1>
+                        <button style="background-color: #0069C9" onclick="dataSource('freelancer')">Freelancer</button>
+                        <button style="background-color: #FBD345;" onclick="dataSource('jobs')">jobs.ie</button>
+                        <button style="background-color: #0DAA41" onclick="dataSource('glassdoor')">Glassdoor</button>
+                    </div>
+                    <div id="Show_Data" style="display: none">
+                        <h1 id="DataName">Freelancer Data</h1>
+                        <div class="loader" style="margin: 0 auto;"></div>
+                        <div class="wrap" style="background-color: white">
+                            <table style="width:100%" id="data_table" class="display">
+                            </table>
+                        </div>
+                        <button onclick="chooseSource()">Choose Different Source</button>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<section id="use_the_data">
+    <div class="home-content-table">
+        <div class="home-content-tablecell">
+            <h1 class="section_header">Data Visualisation</h1>
+            <h2>Using statistical and AI modals we can gain great Insight.
+                We can populate a map and graphs for a business context with the data. </h2>
+            <div class="row">
+                <div class="col-twelve">
+                    <div class="stats"><span>Number of records: 7032</span></div>
+                    <h2>Data Visuals</h2>
+                    <h3>Projects pre country</h3>
+                    <iframe src="sum_project_based_on_country_tools.html" width="650" height="250"></iframe>
+                    <h3>Projects pre type</h3>
+                    <iframe src="types_of_projects.html" width="650" height="250"></iframe>
+                </div>
+                <div id="glassdoorVisual" style="display: None">
+
+                </div>
+                <div id="jobsVisual" style="display: none">
+                </div>
+                <div id="map"></div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<section id="pricing">
+    <div class="home-content-table">
+        <div class="home-content-tablecell">
+            <div class="row">
+            <h1 class="section_header">Pricing</h1>
+            <h2>Theses are packages that will determine the base cost of the project</h2>
+
+                <h2 style="text-align: left;">
+                    <br>Data mining: consists of per webpage or website pricing.
+                    <br>Automation: Can vary based on complexity.
+                    <br>Databases costs are translated from google cloud and amazon.
+                    <br>Statically analysis and AI modals pricing is based on size of project.
+                <br>Portals cost 200 Euro, one time
+                </h2>
+                <h2>Include a project you would like quoted below.</h2>
+<!--                <input type="text" placeholder="Your email" name="email" class="form-field">-->
+<!--                <input type="text" placeholder="phone number" name="phone" class="form-field">-->
+<!--                <textarea name="message" cols="30" rows="10" placeholder="Your project"></textarea>-->
+<!--                <button id="price_contact">Send</button>-->
+
+
+            </div>
+        </div></div>
+
+</section>
+
+
+<section id="contact">
+
+    <div class="overlay"></div>
+
+    <div class="row narrow section-intro with-bottom-sep animate-this">
+        <div class="col-twelve">
+            <h3>Contact</h3>
+            <h1>Get In Touch.</h1>
+
+            <p class="lead">Feel free to contact us any Time you can always expect a quick response</p>
+        </div>
+    </div> <!-- end section-intro -->
+
+    <div class="row contact-content">
+
+        <div class="col-four tab-full contact-info end animate-this">
+
+            <h5>Contact Information</h5>
+
+            <div class="cinfo">
+                <h6>Email Us At</h6>
+                <p>
+                    <a href="mailto:info@cryt.ie"> info@cryt.ie</a>
+                </p>
+            </div>
+
+            <div class="cinfo">
+                <h6>Call Us At</h6>
+                <p>
+                    Phone: <a href="tel:35312118248">+353 1 211 8248</a><br>
+
+                </p>
+            </div>
+
+        </div>
+
+        <div class="col-four tab-full contact-info end animate-this">
+            <div id="contact_us">
+                <h6>Contact us</h6>
+                <input type="text" placeholder="Your email" name="email">
+                <textarea name="message" cols="30" rows="10" placeholder="Your message =)"></textarea>
+                <button id="contact_usBtn">Send</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<footer>
+    <div class="footer-main">
+
+        <div class="row">
+
+            <div class="col-five tab-full footer-about">
+
+                <h4 class="h05">Cryt.</h4>
+
+                <p>Like what you see or have a IT venture you would like to chase.
+                    If you want to connect to a world of talented freelancers and feel secure with our
+                    in-dept planning at a unmatched rate,
+                    Drop us an email.</p>
+
+            </div>
+
+            <div class="col-three tab-full footer-social">
+
+                <h4 class="h05">Follow Us.</h4>
+
+                <ul class="list-links">
+                    <li><a href="https://www.facebook.com/Cryt-857364531285676">Facebook</a></li>
+                    <li><a href="https://www.linkedin.com/company/cryt">LinkedIn</a></li>
+                </ul>
+
+            </div>
+            <div class="col-three tab-full footer-social">
+                <h4 class="h05">Information</h4>
+                <ul class="list-links">
+                    <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <div class="row">
+
+            <div class="col-twelve">
+                <div class="copyright">
+                    <span>© Copyright cryt 1028.</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="go-top">
+        <a class="smoothscroll" title="Back to Top" href="#top">
+            <i class="fa fa-long-arrow-up" aria-hidden="true"></i>
+        </a>
+    </div>
+</footer>
+<div id="preloader">
+    <div id="loader"></div>
+</div>
+
+<div class="alert alert-success" role="alert" id="success_modal" style="
+    color: black;
+    background-color: lightgreen;
+    border-radius: 2px;
+    padding: 10px;
+    display: none;
+    position: fixed;
+    left: 40%;
+    bottom: 10%;
+    font-size: x-large;
+">
+
+</div>
+
+<div class="alert alert-success" role="alert" id="unsuccessful_modal" style="
+    color: black;
+    background-color: red;
+    border-radius: 2px;
+    padding: 10px;
+    display: none;
+    position: fixed;
+    left: 40%;
+    bottom: 10%;
+    font-size: x-large;
+">
+
+</div>
+
+<script src="../js/jquery-2.1.3.min.js"></script>
+<script src="../js/plugins.js"></script>
+<script src="../js/main.js"></script>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+<script src="requests.js"></script>
+<script src="rotatingText.js"></script>
+</body>
+</html>

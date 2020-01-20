@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+        <!--[if IE 8 ]>
+        <html class="no-js oldie ie8" lang="en"> <![endif]-->
+        <!--[if IE 9 ]>
+        <html class="no-js oldie ie9" lang="en"> <![endif]-->
+        <!--[if (gte IE 9)|!(IE)]><!-->
+        <html class="no-js" lang="en"> <!--<![endif]-->
+        <head>
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141019714-1"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+
+                gtag('js', new Date());
+
+                gtag('config', 'UA-141019714-1');
+            </script>
+
+            <!--- basic page needs
+            ================================================== -->
+            <meta charset="utf-8">
+            <title>cryt</title>
+            <meta name="author" content="Adam Sever">
+            <meta name="description" content="Software Irish Dublin consulting Company">
+            <meta name="keywords" content="IT,Dublin,Web Scraping,website">
+            <meta property="og:url" content="https://www.cryt.ie/blogs/Scrapy"/>
+            <meta property='og:type' content='article'/>
+            <meta property='article:author' content='https://www.facebook.com/adam.sever.35'/>
+            <meta property='article:publisher' content='https://www.facebook.com/Cryt-857364531285676'/>
+            <meta property='og:site_name' content='https://www.cryt.ie'/>
+            <meta property="og:title" content="How to deploy scrapy"/>
+            <meta property="og:description"
+                  content="A advanced tutorial for the scrapy framework"/>
+            <meta property="og:image" content="https://www.cryt.ie/images/blog/firebase.png"/>
+
+            <!-- mobile specific metas
+            ================================================== -->
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+            <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+                  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+            <!-- CSS
+          ================================================== -->
+            <link rel="stylesheet" href="../css/base.css">
+            <link rel="stylesheet" href="../css/vendor.css">
+            <link rel="stylesheet" href="../css/main.css">
+            <link rel="stylesheet" href="blogStyle.css">
+            <!-- script
+            ================================================== -->
+            <script src="../js/modernizr.js"></script>
+            <script src="../js/pace.min.js"></script>
+            <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+            <!-- favicons
+             ================================================== -->
+            <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+            <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+        </head>
+<body>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v5.0&appId=507661829880275&autoLogAppEvents=1"></script>
+<header>
+
+    <div class="header-logo">
+        <a href="../index.html"><img src="../images/icon/crytSvgNoBackgroundAndColor.svg" alt="logo" style=""></a>
+    </div>
+
+    <a id="header-menu-trigger" href="../index.html#0">
+        <span class="header-menu-text" style="background: black;">Menu</span>
+
+        <span class="header-menu-icon"></span>
+    </a>
+
+    <nav id="menu-nav-wrap">
+
+        <a href="../index.html#0" class="close-button" title="close"><span>Close</span></a>
+
+        <h3>Cryt</h3>
+
+        <ul class="nav-list">
+            <li class="current"><a href="../index.html#home" title="">Home</a></li>
+            <li><a href="../index.html#about" title="">About</a></li>
+            <li><a href="../index.html#services" title="">Services</a></li>
+            <li><a href="../index.html#portfolio" title="">Works</a></li>
+            <li><a href="../index.html#contact" title="">Contact</a></li>
+        </ul>
+
+        <p class="sponsor-text">
+            Chat now with one of out consultants <span>now <a href="tel:35312118248">+353 1 211 8248</a></span>.
+        </p>
+
+        <ul class="header-social-list">
+            <li>
+                <a href="https://www.facebook.com/Cryt-857364531285676"><i class="fa fa-facebook-square"></i></a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/company/cryt"><i class="fa fa-linkedin-square"></i></a>
+            </li>
+        </ul>
+
+    </nav>  <!-- end #menu-nav-wrap -->
+
+</header> <!-- end header -->
+
+<div id="mainContainer">
+
+    <div class="container container-fluid animate-this" style="background: white">
+        <div id="row">
+            <div class="col-lg-8 blog-main">
+                <div>
+                    <img src="../images/blog/scrapy.png" alt="scrapy icon" style="width: 100%">
+                    <h3 id="top-right" class="pb-3 mb-4 font-italic border-bottom ">Scrapy Advanced</h3>
+
+                </div>
+
+                <div class="blog-post">
+
+                    <div class="card">
+                        <div class="card-header">
+                            Author:
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <img class="profilePicture card-img-bottom" src="../images/avatars/profile.JPG"
+                                     alt="adam sever profile picture">
+                            </div>
+                            <div class="col">
+                                <h3 class="card-title">Adam Sever</h3>
+                                <h5 class="card-subtitle mb-2 text-muted">founder</h5>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!--                    <span>Tags <a href="#" class="btn-outline-primary">data analytics</a><button class="btn-outline-primary">python</button><button class="btn-outline-dark">Webscraping</button></span>-->
+
+
+                    <h3 class="blog-post-title">Introduction</h3>
+                    <p class="blog-post-meta">22/6/2019</p>
+
+                    <h2>Video Version</h2>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/cPx621bqgkY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                    <p>
+                        As most of the tutorials on Scrapy focuses on beginner code.
+                    </p>
+                    <p>
+                        &nbsp;So I decided to but a few tips and trick together for more advanced scrapy.
+                    </p>
+
+                    <a id="JSON"><h3>1: Always try to discover ajax JSON calls</h3></a>
+                    <p>Using the Network tab in chrome developers tab scroll through and ajax calls in the response tab and
+                        keep your eye out for json.
+                        finding the ajax calls allows for quicker response as you do not need to load all the HTML, CSS
+                        files etc.</p>
+
+                    <a id="Postman"><h3>2: Using Postman to investigate HTTP request</h3></a>
+                    <p>Using Postman we can determine what requests require Cookies and headers and also to write
+                        descriptions of request to build a better Idea of the structure of the website.
+                        <br>
+                        A example would be to deconstruct a website search bar as it normally uses cookies or url encode
+                        variables to search.
+                    </p>
+                    <a id="Mongo"><h3>3: Mongo NoSQL database</h3></a>
+                    <p>
+                        Mongo is unstructure which is needed to in web scraping as we can't always predicate what data will
+                        come out and also allows for use to add meta data.
+                        <br>
+                        Using Items and a Pipeline inserting data into Mongo DB can be done with a generic pipeline
+                    </p>
+                    <!--                COntent <HEre></HEre>-->
+
+                    <br>Mongo Pipeline <br>
+                    <pre>
+                <code>
+                class MongoDB:
+                    def __init__(self, mongo_uri, mongo_db, stats):
+                    self.mongo_uri = mongo_uri
+                    self.mongo_db = mongo_db
+                    self.stats = stats
+
+                    @classmethod
+                    def from_crawler(cls, crawler):
+                    ## pull in information from settings.py
+                    return cls(
+                    mongo_uri=crawler.settings.get('MONGO_URI'),
+                    mongo_db=crawler.settings.get('MONGO_DATABASE'),
+                    stats=crawler.stats
+                    )
+
+                    def open_spider(self, spider):
+                    self.client = pymongo.MongoClient(self.mongo_uri)
+                    self.db = self.client[self.mongo_db]
+
+                    def close_spider(self, spider):
+                    self.client.close()
+
+                    def process_item(self, item, spider):
+                    self.db['collectionName'].insert(dict(item))
+                    return item
+                </code> </pre>
+                    <br>
+                    <p>
+                        The above code is all you need no insert statements or worrying if all fields meet the strict
+                        template introduced by SQL databases.
+                        <br>
+                        To keep note:
+                        Ensure that the variables are the same type as it will help with step 5 data Processing.
+                    </p>
+
+                    <a id="WebTokens"><h3>4: Web Tokens and how to handle them</h3></a>
+                    <span><b> CSRF</b></span>: These are variable in the forms and scrapy fromResponse() will handle theses
+                    <br>
+                    <span><b>x-csrf-token</b></span>: Theses are in the header of the request and scrapy will not always
+                    handle theses
+                    <br>
+                    <span><b>x-xsrf-token</b></span>:The token are send in the cookies and again scrapy will handle theses
+                    most times.
+                    <br>
+                    both x-xsrf-token and x-csrf-token might need to be handle if splash or selenium is not being used.
+                    <a id="Data Processing"><h3>5: Data processing</h3></a>
+                    <p>
+                        One of the reason one may want to scrap data is to analyse it for business analytics or insight into
+                        a problem whatever it may be.
+                        You have populated your data in mongoDB and now you want to visual the data.
+                        <br>
+                    </p>
+                    <p>
+                        Mongo DB has a great querying system and using matplotlib we can create bar charts, scatter graphs
+                        and many more to represent our data and gain insight.
+                        <br>
+                        In only a few lines of code.
+                    </p>
+
+
+
+                    If you have any questions drop a email <a href="mailto:info@cryt.ie">info@cryt.ie</a>
+                    <br>If this post helped share it on facebook with friends 😊.
+
+                    <div class="fb-share-button"
+                         data-href="https://www.cryt.ie/blogs/the%20Why"
+                         data-layout="button_count">
+                    </div>
+                    <div class="form-inline" style="display: flex;justify-content: space-around;padding-top: 5px;align-content: center">
+                        <h3>Subscribe to blog!</h3>
+                        <div class="input-group mb-2 mr-sm-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">@</div>
+                            </div>
+                            <input type="email" class="form-control" id="subscribe_email" placeholder="mat@example.com">
+                        </div>
+                        <button id="subscribeBtn" class="form-inline">Subscribe!</button>
+                    </div>
+
+                    <div class="fb-comments" data-href="https://www.cryt.ie/blogs/Scrapy" data-width="" data-numposts="5"></div>
+                </div>
+
+            </div>
+            <aside class="col-lg-4 blog-sidebar">
+
+                <div class="sideNav p-3">
+                    <span><b>Nav</b></span>
+                    <ul>
+                        <li><a href="#JSON">1: Discover JSON calls</a></li>
+                        <li><a href="#Postman">2: Postman</a></li>
+                        <li><a href="#Mongo">3: MongoDB</a></li>
+                        <li><a href="#WebTokens">4: Web Tokens</a></li>
+                    </ul>
+                </div>
+
+                <div id="readMoreNav">
+                    <h2>Read More:</h2>
+
+                    <div id="folio-wrap" class="bricks-wrapper">
+
+                        <div class="brick folio-item blogBrick">
+                            <div class="item-wrap animate-this" data-src="images/">
+                                <a href="Why%20Firebase.html">
+                                    <img src="../images/blog/firebase.png" alt="Firebase">
+                                    <div class="item-text">
+                            <span class="folio-types" style="font-size: 5em">
+                                        How Firebase can help your company become admin-less
+                                   </span>
+                                    </div>
+                                </a>
+                            </div> <!-- end item-wrap -->
+                        </div>
+                        <div class="brick folio-item blogBrick">
+                            <div class="item-wrap animate-this">
+                                <a href="why%20And%20How%20Of%20SEO.html" class="overlay">
+                                    <img src="../images/blog/search-engines.png" alt="SEO">
+                                    <div class="item-text">
+                            <span class="folio-types" style="font-size: 5em">
+                                      Marketing SEO
+                                   </span>
+                                    </div>
+                                </a>
+                            </div> <!-- end item-wrap -->
+                        </div>
+                        <!--            //sdfs-->
+                        <div class="brick folio-item blogBrick" style="background: bisque;">
+                            <div class="item-wrap animate-this">
+                                <a href="Scrapy.html" class="overlay">
+                                    <img src="../images/blog/scrapyPython.jpg" alt="scrapy">
+                                    <div class="item-text">
+                            <span class="folio-types" style="font-size: 5em">
+                                      Advanced Scrapy
+                                   </span>
+                                    </div>
+                                </a>
+                            </div> <!-- end item-wrap -->
+                        </div>
+                    </div>
+
+                </div>
+
+            </aside>
+        </div>
+
+    </div>
+</div>
+
+
+<section id="contact">
+
+    <div class="overlay"></div>
+
+    <div class="row narrow section-intro with-bottom-sep animate-this">
+        <div class="col-twelve">
+            <h3>Contact</h3>
+            <h1>Get In Touch.</h1>
+
+            <p class="lead">Feel free to contact us any Time you can always expect a quick response</p>
+        </div>
+    </div> <!-- end section-intro -->
+
+    <div class="row contact-content">
+
+        <div class="col-four tab-full contact-info end animate-this">
+
+            <h5>Contact Information</h5>
+
+
+            <div class="cinfo">
+                <h6>Email Us At</h6>
+                <p>
+                    <a href="mailto:info@cryt.ie"> info@cryt.ie</a>
+                </p>
+            </div>
+
+            <div class="cinfo">
+                <h6>Call Us At</h6>
+                <p>
+
+                    Phone: <a href="tel:35312118248">+353 1 211 8248</a><br>
+                    <!--                    Mobile: (+63) 555 0100<br>-->
+                    <!--                        Fax: (+63) 555 0101-->
+                </p>
+            </div>
+
+        </div>
+        <div class="col-four tab-full contact-info end animate-this">
+            <div id="contact_us">
+                <h6>Contact us</h6>
+                <input type="text" placeholder="Your email"  name="email">
+                <textarea name="message"  cols="30" rows="10" placeholder="Your message =)"></textarea>
+                <button id="contact_usBtn">Send</button>
+            </div>
+        </div>
+
+
+    </div> <!-- end row contact-content -->
+    <ul class="home-social-list">
+        <li class="animate-intro">
+            <a href="https://www.facebook.com/Cryt-857364531285676"><i class="fa fa-facebook-square"></i></a>
+        </li>
+
+        <li class="animate-intro">
+            <a href="https://www.linkedin.com/company/cryt"><i class="fa fa-linkedin-square"></i></a>
+        </li>
+    </ul>
+</section> <!-- end contact -->
+<footer>
+    <div class="footer-main">
+
+        <div class="row">
+
+            <div class="col-five tab-full footer-about">
+
+                <h4 class="h05">Cryt.</h4>
+
+                <p>Like what you see or have a IT venture you would like to chase.
+                    If you want to connect to a world of talented freelancers and feel secure with our
+                    in-dept planning at a unmatched rate,
+                    Drop us an email.</p>
+
+            </div> <!-- end footer-about -->
+
+            <div class="col-three tab-full footer-social">
+
+                <h4 class="h05">Follow Us.</h4>
+
+                <ul class="list-links">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+
+            </div>
+            <div class="col-three tab-full footer-social">
+                <h4 class="h05">Information</h4>
+                <ul class="list-links">
+                    <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <div class="row">
+
+            <div class="col-twelve">
+                <div class="copyright">
+                    <span>© Copyright cryt 1028.</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="go-top">
+        <a class="smoothscroll" title="Back to Top" href="#top">
+            <i class="fa fa-long-arrow-up" aria-hidden="true"></i>
+        </a>
+    </div>
+</footer>
+
+<div id="preloader">
+    <div id="loader"></div>
+</div>
+<div class="alert alert-success" role="alert" id="success_modal" style="
+    color: black;
+    background-color: lightgreen;
+    border-radius: 2px;
+    padding: 10px;
+    display: none;
+    position: fixed;
+    left: 40%;
+    bottom: 10%;
+    font-size: x-large;
+">
+
+</div>
+
+<div class="alert alert-success" role="alert" id="unsuccessful_modal" style="
+    color: black;
+    background-color: red;
+    border-radius: 2px;
+    padding: 10px;
+    display: none;
+    position: fixed;
+    left: 40%;
+    bottom: 10%;
+    font-size: x-large;
+">
+
+</div>
+
+<script src="../js/jquery-2.1.3.min.js"></script>
+<script src="../js/plugins.js"></script>
+<script src="../js/main.js"></script>
+
+</body>
+</html>

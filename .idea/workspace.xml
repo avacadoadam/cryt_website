@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c2869799-fa30-4771-943c-4d523d46ac07" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="cryt-master" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>linked</find>
+      <find>videop</find>
+      <find>f</find>
+      <find>header-menu-trigger</find>
+      <find>owl-carousel</find>
+      <find>behance</find>
+    </findStrings>
+  </component>
+  <component name="ProjectId" id="1TPBYMplovaJo1xQgTvfyQHF4WE" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\avaca\Desktop\cryt-master\cryt-master\blogs" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\avaca\Desktop\cryt-master\cryt-master\blogs" />
+      <recent name="C:\Users\avaca\Desktop\cryt-master\cryt-master\API" />
+      <recent name="C:\Users\avaca\Desktop\cryt-master\cryt-master" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c2869799-fa30-4771-943c-4d523d46ac07" name="Default Changelist" comment="" />
+      <created>1559111733924</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1559111733924</updated>
+      <workItem from="1559111735452" duration="4112000" />
+      <workItem from="1559120309102" duration="5000000" />
+      <workItem from="1559238906274" duration="2793000" />
+      <workItem from="1559324685374" duration="734000" />
+      <workItem from="1559400234758" duration="168000" />
+      <workItem from="1559564105804" duration="3719000" />
+      <workItem from="1559593401539" duration="1623000" />
+      <workItem from="1560419560208" duration="635000" />
+      <workItem from="1560532094719" duration="2004000" />
+      <workItem from="1560538825519" duration="1732000" />
+      <workItem from="1560540766970" duration="1621000" />
+      <workItem from="1560543563509" duration="1798000" />
+      <workItem from="1560545385739" duration="1660000" />
+      <workItem from="1560547826280" duration="416000" />
+      <workItem from="1560615822681" duration="1848000" />
+      <workItem from="1560641602327" duration="1556000" />
+      <workItem from="1560643194774" duration="1980000" />
+      <workItem from="1560682180735" duration="1787000" />
+      <workItem from="1560683992690" duration="1786000" />
+      <workItem from="1560685797199" duration="1121000" />
+      <workItem from="1560696687867" duration="493000" />
+      <workItem from="1560704266524" duration="1808000" />
+      <workItem from="1560708150095" duration="687000" />
+      <workItem from="1560710001645" duration="1790000" />
+      <workItem from="1560711816362" duration="1824000" />
+      <workItem from="1560713889815" duration="1884000" />
+      <workItem from="1560715922446" duration="865000" />
+      <workItem from="1560718140614" duration="868000" />
+      <workItem from="1561698927141" duration="1614000" />
+      <workItem from="1561704393551" duration="599000" />
+      <workItem from="1564578406500" duration="1831000" />
+      <workItem from="1564580500087" duration="1507000" />
+      <workItem from="1564592181470" duration="1288000" />
+      <workItem from="1564628039788" duration="1796000" />
+      <workItem from="1564629860797" duration="1927000" />
+      <workItem from="1564631988325" duration="1788000" />
+      <workItem from="1564633797549" duration="1650000" />
+      <workItem from="1564635616931" duration="1317000" />
+      <workItem from="1573351967822" duration="412000" />
+      <workItem from="1575793453862" duration="1203000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

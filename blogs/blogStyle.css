@@ -1,0 +1,123 @@
+.blogImage {
+    max-height: 400px;
+}
+
+
+.profilePicture {
+    object-fit: scale-down;
+    border-radius: 50%;
+    width: 50px;
+    border: 3px solid #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
+}
+
+.Blogger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    /*margin-left: 10%;*/
+    margin-bottom: 4%;
+    margin-top: 10%;
+
+}
+
+.blogHeader {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.profileCard {
+    display: flex;
+    align-items: center;
+
+}
+
+.contentPanel {
+    /*background: black;*/
+    /*color: white;*/
+    color: black;
+    background: white;
+    display: flex;
+}
+
+.contentPanel {
+
+}
+
+.contentPanel p,h1,h2,h3,h4,h5,h6 {
+    /*color: white;*/
+    color: black;
+}
+
+.intro {
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+.sideNav{
+
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-left:    1px black solid;
+    margin-left: 10px;
+}
+
+.sideNav ul {
+    list-style: none;
+}
+
+.intro .introText{
+
+    flex-grow: 2;
+}
+#readMoreNav{
+    /*margin-left: 20px;*/
+    /*display: inline-block;*/
+    /*float: right;*/
+    /*width: 20%;*/
+    /*padding: 0;*/
+    text-align: center;
+    /*margin-right: 4%;*/
+}
+
+.blogBrick *{
+    font-size: 0.5em;
+}
+
+#mainContainer {
+    display: flex;
+    align-items: baseline;
+    background: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    padding: 20px 10px;
+
+}
+
+
+
+
+#lightMode {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+#header-menu-trigger {
+    background: black;
+}
+
+#top-right {
+    position: absolute;
+    top: 16px;
+    left: 32px;
+    background-color:rgba(255, 255, 255, 0.5);"
+
+}
